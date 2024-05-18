@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Objects;
 
-class Book {
-    private String title;
-    private String author;
+class Books {
+    String title;
+    String author;
 
-    public Book(String title, String author) {
+    public Books(String title, String author) {
         this.title = title;
         this.author = author;
     }
@@ -36,7 +36,7 @@ class Book {
             return false;
         }
         Book book = (Book) obj;
-        return title.equals(book.title) && author.equals(book.author);
+        return title.equals(book.getTitle()) && author.equals(book.getAuthor());
     }
 
     @Override
@@ -45,10 +45,10 @@ class Book {
     }
 }
 
-class Library {
+class LibraryM {
     private List<Book> books;
 
-    public Library() {
+    public LibraryM() {
         this.books = new ArrayList<>();
     }
 
@@ -80,7 +80,7 @@ class Library {
 public class LibraryApplication {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Library library = new Library();
+        LibraryM library = new LibraryM();
 
         while (true) {
             System.out.println("\nChoose Operation:");
