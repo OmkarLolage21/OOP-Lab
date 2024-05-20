@@ -11,12 +11,13 @@ public class BasicArrays {
         System.out.println("Enter the size of the array : ");
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
+        int sum=0;
         int[] omkar = new int[n];
         for (int i=0;i<n;i++){
             omkar[i] = sc.nextInt();
         }
         for(int i=0;i<n;i++){
-            int sum = omkar[i];
+            sum += omkar[i];
             if(omkar[i] > max ){
                 max = omkar[i];
             }
@@ -25,6 +26,9 @@ public class BasicArrays {
             }
         }
         Arrays.sort(omkar);
+        System.out.println("Sum of all elements is "+sum);
+        System.out.println("Maximum element in array is " + max);
+        System.out.println("Minimum element in array is " + min);
         System.out.println(Arrays.toString(omkar));
         int[] revOmkar = new int[n];
         for(int i = n-1 ;i >= 0 ;i--){

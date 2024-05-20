@@ -11,7 +11,8 @@ public class StringOperations {
         System.out.println("Lowercase conversion of String is " + s.toLowerCase());
         System.out.println("Enter a string to concatenate: ");
         String so = sc.nextLine();
-        System.out.println("Concatenation of both Strings is " + s + so);
+        s = s.concat(so);
+        System.out.println("Concatenation of both Strings is " + s );
         System.out.println("Enter a substring: ");
         String sub = sc.nextLine();
         System.out.println(s.contains(sub));

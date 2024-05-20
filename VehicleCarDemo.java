@@ -55,10 +55,6 @@ public class VehicleCarDemo {
             return numberOfDoors;
         }
 
-        public void setNumberOfDoors(int numberOfDoors) {
-            this.numberOfDoors = numberOfDoors;
-        }
-
         @Override
         public String toString() {
             return "Car [Make=" + getMake() + ", Model=" + getModel() + ", Year=" + getYear() + ", Number of Doors=" + numberOfDoors + "]";
@@ -72,9 +68,9 @@ public class VehicleCarDemo {
         Car car = new Car("Honda", "Civic", 2020, 4);
         System.out.println(car);
 
-        System.out.println("Make: " + car.getMake());
-        System.out.println("Model: " + car.getModel());
-        System.out.println("Year: " + car.getYear());
-        System.out.println("Number of Doors: " + car.getNumberOfDoors());
+//        System.out.println("Make: " + car.getMake());
+//        System.out.println("Model: " + car.getModel());
+//        System.out.println("Year: " + car.getYear());
+//        System.out.println("Number of Doors: " + car.getNumberOfDoors());
     }
 }

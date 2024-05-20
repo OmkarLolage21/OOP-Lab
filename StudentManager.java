@@ -14,8 +14,6 @@ class Student {
         this.rollNumber = rollNumber;
         this.grade = grade;
     }
-
-    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -53,12 +51,9 @@ public class StudentManager {
         students = new ArrayList<>();
     }
 
-    // Add a student to the list
     public void addStudent(Student student) {
         students.add(student);
     }
-
-    // Remove a student from the list by roll number
     public void removeStudent(int rollNumber) {
         Iterator<Student> iterator = students.iterator();
         while (iterator.hasNext()) {
@@ -104,12 +99,12 @@ public class StudentManager {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter student name: ");
+                    System.out.println("Enter student name: ");
                     String name = scanner.nextLine();
-                    System.out.print("Enter roll number: ");
+                    System.out.println("Enter roll number: ");
                     int rollNumber = scanner.nextInt();
-                    scanner.nextLine(); // consume newline
-                    System.out.print("Enter grade: ");
+                    scanner.nextLine();
+                    System.out.println("Enter grade: ");
                     String grade = scanner.nextLine();
                     manager.addStudent(new Student(name, rollNumber, grade));
                     break;
